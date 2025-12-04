@@ -539,13 +539,16 @@ export const experiences = [
   },
 ];
 
+// In the projects array - remove the "publications" category from the projects section
+// Projects should only have: research, consulting, academic
+
 export const projects = [
   {
     id: 1,
     title: 'Transnational Organized Crime in Lake Tanganyika',
     description: 'Comprehensive research on TOC activities and threats linked to lake use in the DRC region.',
     category: 'research',
-    tech: ['Field Research', 'Stakeholder Analysis', 'Policy Recommendations'],
+    tech: ['Field Research', 'Stakeholder Analysis', 'Policy Recommendations', 'Focus Group Discussions'],
     stats: { Countries: 2, 'KIIs': 45, 'FGDs': 12 },
     github: null,
     demo: null,
@@ -555,7 +558,7 @@ export const projects = [
     title: 'Disaster Risk Reduction in Conflict Zones',
     description: 'Research focusing on food security in Lamu County to inform Kenya Defence Forces operations.',
     category: 'research',
-    tech: ['GIS Mapping', 'Risk Assessment', 'Policy Analysis'],
+    tech: ['GIS Mapping', 'Risk Assessment', 'Policy Analysis', 'Field Surveys'],
     stats: { Reports: 3, 'Workshops': 8, 'Policy Briefs': 5 },
     github: null,
     demo: null,
@@ -565,7 +568,7 @@ export const projects = [
     title: 'Lamu County DRM Policy Framework',
     description: 'Development of disaster risk management policy and legislation for Lamu County.',
     category: 'consulting',
-    tech: ['Policy Development', 'Stakeholder Engagement', 'Legal Framework'],
+    tech: ['Policy Development', 'Stakeholder Engagement', 'Legal Framework', 'Capacity Building'],
     stats: { 'Policy Docs': 3, 'Stakeholders': 25, 'Timeline': '3 months' },
     github: null,
     demo: null,
@@ -575,7 +578,7 @@ export const projects = [
     title: 'Strategic Planning - FABEC Engineers',
     description: 'Facilitation of strategic planning workshop for Tanzanian engineering firm.',
     category: 'consulting',
-    tech: ['Strategic Planning', 'SWOT Analysis', 'Workshop Facilitation'],
+    tech: ['Strategic Planning', 'SWOT Analysis', 'Risk Assessment', 'Workshop Facilitation'],
     stats: { 'Workshops': 1, 'Team': 3, 'Outcome': '5-year Plan' },
     github: null,
     demo: null,
@@ -585,21 +588,33 @@ export const projects = [
     title: 'Conflict Assessment - Dadaab Refugee Camp',
     description: 'Trend analysis on conflict for NCCK peace building program over 12 years.',
     category: 'consulting',
-    tech: ['Conflict Analysis', 'Peace Building', 'Refugee Studies'],
+    tech: ['Conflict Analysis', 'Peace Building', 'Refugee Studies', 'Qualitative Research'],
     stats: { 'Years': 12, 'Team': 7, 'Reports': 1 },
     github: null,
     demo: null,
   },
+  {
+    id: 6,
+    title: 'PhD Research: Fish Farming in Busia County',
+    description: 'Doctoral research on households and group networks in fish farming development.',
+    category: 'academic',
+    tech: ['Academic Research', 'Qualitative Analysis', 'Field Studies', 'Thesis Writing'],
+    stats: { 'Duration': '8 years', 'Publications': 5, 'Field Sites': 15 },
+    github: null,
+    demo: null,
+  },
 ];
-
+// utils/constants.js - Update certificates array
 export const certificates = [
   {
     id: 1,
-    title: 'Ph.D in Sociology',
+    title: 'Doctor of Philosophy (Ph.D) in Sociology',
     issuer: 'Kenyatta University',
     date: 'February 2019',
     type: 'Doctorate',
     credentialId: 'KU-PHD-2019-001',
+    imageUrl: '/images/certificates/phd.png', // Updated path
+    altText: 'PhD Certificate from Kenyatta University'
   },
   {
     id: 2,
@@ -608,6 +623,8 @@ export const certificates = [
     date: '2009',
     type: 'Masters',
     credentialId: 'UON-MA-2009',
+    imageUrl: '/images/certificates/masters.png', // Updated path
+    altText: 'MA Certificate from University of Nairobi'
   },
   {
     id: 3,
@@ -616,6 +633,8 @@ export const certificates = [
     date: '2007',
     type: 'Bachelors',
     credentialId: 'CUEA-BA-2007',
+    imageUrl: '/images/certificates/bachelors.png', // Updated path
+    altText: 'BA Certificate from Catholic University of Eastern Africa'
   },
   {
     id: 4,
@@ -624,6 +643,9 @@ export const certificates = [
     date: '2010',
     type: 'Language',
     credentialId: 'AF-C1-2010',
+    // If you have a French certificate image, add it here:
+    // imageUrl: '/images/certificates/french.png',
+    altText: 'French Language Certificate'
   },
   {
     id: 5,
@@ -632,6 +654,9 @@ export const certificates = [
     date: '2011',
     type: 'Technical',
     credentialId: 'ITI-SPSS-2011',
+    // If you have an SPSS certificate image, add it here:
+    // imageUrl: '/images/certificates/spss.png',
+    altText: 'SPSS Statistical Package Certificate'
   },
 ];
 
@@ -656,7 +681,7 @@ export const publications = [
     type: 'Journal Article',
     keywords: ['Disability', 'Maritime Security', 'Inclusion'],
     abstract: 'Analysis of disability inclusion in maritime disaster risk reduction efforts...',
-    link: '#',
+    link: 'https://www.researchgate.net/publication/352191678_Disability_Mainstreaming_in_Maritime_Disaster_Risk_Reduction_A_Case_of_Mombasa_and_Lamu_Counties_Kenya',
   },
   {
     id: 3,

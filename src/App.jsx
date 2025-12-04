@@ -6,7 +6,7 @@ import About from './components/Sections/About';
 import Experience from './components/Sections/Experience';
 import Projects from './components/Sections/Projects';
 import Publications from './components/Sections/Publications'; // Add this
-import Certificates from './components/Sections/Certificates';
+// import Certificates from './components/Sections/Certificates';
 import Contact from './components/Sections/Contact';
 import Footer from './components/Layout/Footer';
 import Education from './components/Sections/Education';
@@ -23,7 +23,7 @@ function App() {
           <Experience />
           <Projects />
           <Publications />
-          <Certificates />
+          {/* <Certificates /> */}
           <Contact />
         </main>
         <Footer />
