@@ -5,9 +5,11 @@ import Hero from './components/Sections/Hero';
 import About from './components/Sections/About';
 import Experience from './components/Sections/Experience';
 import Projects from './components/Sections/Projects';
+import Publications from './components/Sections/Publications'; // Add this
 import Certificates from './components/Sections/Certificates';
 import Contact from './components/Sections/Contact';
 import Footer from './components/Layout/Footer';
+import Education from './components/Sections/Education';
 
 function App() {
   return (
@@ -17,8 +19,10 @@ function App() {
         <main>
           <Hero />
           <About />
+          <Education /> {/* Add this */}
           <Experience />
           <Projects />
+          <Publications />
           <Certificates />
           <Contact />
         </main>

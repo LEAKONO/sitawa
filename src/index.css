@@ -12,6 +12,7 @@
   
   body {
     @apply antialiased text-gray-900 dark:text-gray-100;
+    font-family: 'Inter', system-ui, sans-serif;
   }
   
   ::selection {
@@ -43,4 +44,150 @@
   .card-hover {
     @apply transition-all duration-300 hover:shadow-2xl hover:scale-[1.02];
   }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-spin-once {
+    animation: spinOnce 0.5s ease-in-out;
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulseSubtle 2s ease-in-out infinite;
+  }
+  
+  .animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-bounce-delay {
+    animation: bounce 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+  
+  .animate-fade-in-delay {
+    animation: fadeIn 1s ease-in-out 0.5s both;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .animate-slide-left {
+    animation: slideLeft 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .animate-slide-right {
+    animation: slideRight 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+/* Keyframe definitions */
+@keyframes spinOnce {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-primary-500 to-purple-500 rounded-full;
+}
+
+/* Add to your global CSS or component CSS */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.glass-morphism {
+  @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border border-white/20 dark:border-gray-700/50 shadow-lg;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-2xl hover:border-primary-300 dark:hover:border-primary-700;
+}
+
+/* Timeline styles for alternative view */
+.timeline-line {
+  @apply absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary-500 via-purple-500 to-primary-500;
+}
+
+.timeline-dot {
+  @apply absolute w-4 h-4 bg-gradient-to-r from-primary-600 to-purple-600 rounded-full ring-4 ring-white dark:ring-gray-900;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on your navbar height */
+}
+
+/* Active section highlighting in navbar */
+.nav-link {
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
 }
