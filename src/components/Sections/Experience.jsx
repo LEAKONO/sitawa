@@ -1,4 +1,3 @@
-// components/Sections/Experience.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -24,17 +23,15 @@ const Experience = () => {
     ? filteredExperiences
     : filteredExperiences.slice(0, 6);
 
-  // Category colors for badges - matching Projects component style
   const categoryColors = {
-    research: "from-blue-500 to-cyan-500",
-    academic: "from-green-500 to-emerald-500",
-    consulting: "from-orange-500 to-yellow-500",
-    administration: "from-purple-500 to-pink-500",
+    research: "from-sky-500 to-blue-600",
+    academic: "from-emerald-500 to-teal-600",
+    consulting: "from-amber-500 to-orange-600",
+    administration: "from-indigo-500 to-purple-600",
     volunteer: "from-teal-500 to-cyan-500",
-    teaching: "from-indigo-500 to-purple-500",
+    teaching: "from-blue-500 to-indigo-600",
   };
 
-  // Map experience types to colors
   const getCategoryColor = (type) => {
     const typeLower = type.toLowerCase();
     if (typeLower.includes("research")) return categoryColors.research;
@@ -43,7 +40,7 @@ const Experience = () => {
     if (typeLower.includes("administration") || typeLower.includes("admin")) return categoryColors.administration;
     if (typeLower.includes("volunteer")) return categoryColors.volunteer;
     if (typeLower.includes("teaching")) return categoryColors.teaching;
-    return "from-primary-500 to-purple-500"; // default
+    return "from-sky-500 to-navy-700";
   };
 
   return (
@@ -62,7 +59,7 @@ const Experience = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3 rounded-full transition-all duration-300 text-sm sm:text-base ${
                 activeCategory === category.id
-                  ? "bg-gradient-to-r from-primary-600 to-purple-600 text-white shadow-lg"
+                  ? "bg-gradient-to-r from-sky-600 to-navy-800 text-white shadow-lg"
                   : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:shadow-md"
               }`}
             >
@@ -77,25 +74,25 @@ const Experience = () => {
         {/* Statistics */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12">
           <div className="glass-morphism p-4 sm:p-6 rounded-2xl text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl font-bold text-sky-600 dark:text-sky-400 mb-1 sm:mb-2">
               {experiences.length}
             </div>
             <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Total Roles</div>
           </div>
           <div className="glass-morphism p-4 sm:p-6 rounded-2xl text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-purple-600 dark:text-purple-400 mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1 sm:mb-2">
               {experiences.filter((e) => e.category === "research").length}
             </div>
             <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Research Roles</div>
           </div>
           <div className="glass-morphism p-4 sm:p-6 rounded-2xl text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-green-600 dark:text-green-400 mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-1 sm:mb-2">
               {experiences.filter((e) => e.category === "academic").length}
             </div>
             <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Academic Roles</div>
           </div>
           <div className="glass-morphism p-4 sm:p-6 rounded-2xl text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-orange-600 dark:text-orange-400 mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl font-bold text-amber-600 dark:text-amber-400 mb-1 sm:mb-2">
               {experiences.filter((e) => e.category === "consulting").length}
             </div>
             <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Consulting Projects</div>
@@ -117,9 +114,9 @@ const Experience = () => {
                 whileHover={{ scale: 1.02, translateY: -5 }}
                 className="glass-morphism rounded-2xl overflow-hidden h-full card-hover flex flex-col"
               >
-                {/* Experience Header - Using Projects component pattern */}
+                {/* Experience Header */}
                 <div className="p-4 sm:p-6 lg:p-8 pb-4 sm:pb-6">
-                  {/* Category Badge - Top Left like Projects component */}
+                  {/* Category Badge */}
                   <div className="flex justify-between items-start mb-4">
                     <span
                       className={`px-3 py-1.5 sm:px-4 sm:py-1.5 bg-gradient-to-r ${
@@ -129,19 +126,19 @@ const Experience = () => {
                       {exp.type}
                     </span>
                     
-                    {/* Icon - moved to right side like Projects component */}
-                    <div className="p-2 rounded-lg bg-gradient-to-br from-primary-100 to-purple-100 dark:from-primary-900/20 dark:to-purple-900/20">
+                    {/* Icon */}
+                    <div className="p-2 rounded-lg bg-gradient-to-br from-sky-100 to-navy-100 dark:from-sky-900/20 dark:to-navy-900/20">
                       <Briefcase
-                        className="text-primary-600 dark:text-primary-400 w-5 h-5 sm:w-6 sm:h-6"
+                        className="text-sky-600 dark:text-sky-400 w-5 h-5 sm:w-6 sm:h-6"
                       />
                     </div>
                   </div>
 
                   {/* Position and Company */}
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
                     {exp.position}
                   </h3>
-                  <p className="text-primary-600 dark:text-primary-400 font-medium text-sm sm:text-base lg:text-lg mb-3 sm:mb-4">
+                  <p className="text-sky-600 dark:text-sky-400 font-medium text-sm sm:text-base lg:text-lg mb-3 sm:mb-4">
                     {exp.company}
                   </p>
 
@@ -173,14 +170,14 @@ const Experience = () => {
                       <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 flex items-center space-x-2">
                         <Users
                           size={16}
-                          className="text-primary-600 dark:text-primary-400"
+                          className="text-sky-600 dark:text-sky-400"
                         />
                         <span>Key Responsibilities</span>
                       </h4>
                       <ul className="space-y-1 sm:space-y-2">
                         {exp.responsibilities.slice(0, 3).map((resp, idx) => (
                           <li key={idx} className="flex items-start space-x-2">
-                            <span className="w-1.5 h-1.5 bg-primary-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0" />
+                            <span className="w-1.5 h-1.5 bg-sky-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0" />
                             <span className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">
                               {resp}
                             </span>
@@ -196,14 +193,14 @@ const Experience = () => {
                       <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 flex items-center space-x-2">
                         <Award
                           size={16}
-                          className="text-purple-600 dark:text-purple-400"
+                          className="text-amber-600 dark:text-amber-400"
                         />
                         <span>Achievements</span>
                       </h4>
                       <ul className="space-y-1 sm:space-y-2">
                         {exp.achievements.slice(0, 2).map((achievement, idx) => (
                           <li key={idx} className="flex items-start space-x-2">
-                            <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0" />
+                            <span className="w-1.5 h-1.5 bg-amber-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0" />
                             <span className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">
                               {achievement}
                             </span>
@@ -223,7 +220,7 @@ const Experience = () => {
                         {exp.skills.slice(0, 4).map((skill, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 sm:px-3 sm:py-1 bg-gradient-to-r from-primary-100 to-primary-50 dark:from-primary-900/20 dark:to-primary-800/20 text-primary-700 dark:text-primary-300 rounded-full text-xs"
+                            className="px-2 py-1 sm:px-3 sm:py-1 bg-gradient-to-r from-sky-100 to-sky-50 dark:from-sky-900/20 dark:to-sky-800/20 text-sky-700 dark:text-sky-300 rounded-full text-xs"
                           >
                             {skill}
                           </span>
@@ -247,7 +244,7 @@ const Experience = () => {
           <div className="text-center mt-8 sm:mt-12">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-4 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full hover:opacity-90 transition-opacity flex items-center space-x-2 mx-auto text-sm sm:text-base"
+              className="px-4 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-full hover:opacity-90 transition-opacity flex items-center space-x-2 mx-auto text-sm sm:text-base"
             >
               <Filter size={16} />
               <span>

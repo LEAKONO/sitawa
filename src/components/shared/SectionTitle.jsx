@@ -13,7 +13,7 @@ const SectionTitle = ({ title, subtitle }) => {
         initial={{ width: 0 }}
         whileInView={{ width: 80 }}
         transition={{ duration: 0.8 }}
-        className="h-1 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto mb-4 sm:mb-6 rounded-full"
+        className="h-1 bg-gradient-to-r from-sky-500 to-navy-700 mx-auto mb-4 sm:mb-6 rounded-full"
       />
       
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">

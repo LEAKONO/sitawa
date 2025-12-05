@@ -1,4 +1,3 @@
-// components/Sections/Projects.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
@@ -21,9 +20,9 @@ const Projects = () => {
 
   // Category colors for badges
   const categoryColors = {
-    research: 'from-blue-500 to-cyan-500',
-    consulting: 'from-green-500 to-emerald-500',
-    academic: 'from-purple-500 to-pink-500',
+    research: 'from-sky-500 to-blue-600',
+    consulting: 'from-emerald-500 to-teal-600',
+    academic: 'from-indigo-500 to-purple-600',
   };
 
   return (
@@ -49,7 +48,7 @@ const Projects = () => {
               onClick={() => setFilter(category.id)}
               className={`px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
                 filter === category.id
-                  ? 'bg-gradient-to-r from-primary-600 to-purple-600 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-sky-600 to-navy-800 text-white shadow-lg'
                   : 'glass-morphism text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:shadow-md'
               }`}
             >
@@ -83,7 +82,7 @@ const Projects = () => {
                   <div className="p-4 sm:p-6 pb-3 sm:pb-4">
                     {/* Category Badge - Top Right */}
                     <div className="flex justify-between items-start mb-3 sm:mb-4">
-                      <span className={`px-3 py-1 sm:px-4 sm:py-1.5 bg-gradient-to-r ${categoryColors[project.category] || 'from-primary-500 to-purple-500'} text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-sm`}>
+                      <span className={`px-3 py-1 sm:px-4 sm:py-1.5 bg-gradient-to-r ${categoryColors[project.category] || 'from-sky-500 to-navy-700'} text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-sm`}>
                         {project.category}
                       </span>
                       
@@ -96,7 +95,7 @@ const Projects = () => {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
-                            className="p-1.5 sm:p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                            className="p-1.5 sm:p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
                             aria-label="GitHub Repository"
                           >
                             <Github size={16} className="sm:w-4.5 sm:h-4.5" />
@@ -109,7 +108,7 @@ const Projects = () => {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
-                            className="p-1.5 sm:p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                            className="p-1.5 sm:p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
                             aria-label="Live Demo"
                           >
                             <ExternalLink size={16} className="sm:w-4.5 sm:h-4.5" />
@@ -119,7 +118,7 @@ const Projects = () => {
                     </div>
 
                     {/* Project Title */}
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors line-clamp-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors line-clamp-2">
                       {project.title}
                     </h3>
 
@@ -140,7 +139,7 @@ const Projects = () => {
                         {project.tech.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 sm:px-3 sm:py-1.5 bg-gradient-to-r from-primary-100 to-primary-50 dark:from-primary-900/20 dark:to-primary-800/20 text-primary-700 dark:text-primary-300 rounded-lg text-xs font-medium"
+                            className="px-2 py-1 sm:px-3 sm:py-1.5 bg-gradient-to-r from-sky-100 to-sky-50 dark:from-sky-900/20 dark:to-sky-800/20 text-sky-700 dark:text-sky-300 rounded-lg text-xs font-medium"
                           >
                             {tech}
                           </span>
@@ -213,7 +212,7 @@ const Projects = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-3.5 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl transition-all duration-300 shadow-md text-sm sm:text-base"
+              className="inline-flex items-center px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-3.5 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-full font-semibold hover:shadow-xl transition-all duration-300 shadow-md text-sm sm:text-base"
             >
               Start a Conversation
               <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -13,7 +13,7 @@ export const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
-  { name: 'Education', href: '#education' }, // Add this
+  { name: 'Education', href: '#education' },
   { name: 'Projects', href: '#projects' },
   { name: 'Publications', href: '#publications' },
   { name: 'Contact', href: '#contact' },
@@ -54,6 +54,8 @@ export const aboutData = {
     { name: 'English', level: 'Native', proficiency: 100 },
     { name: 'French', level: 'Fluent', proficiency: 90 },
     { name: 'Kiswahili', level: 'Native', proficiency: 100 },
+    { name: 'Luhya', level: 'Fluent', proficiency: 90 },
+    { name: 'Lingala', level: 'Intermediate', proficiency: 60 },
   ],
 };
 
@@ -539,9 +541,6 @@ export const experiences = [
   },
 ];
 
-// In the projects array - remove the "publications" category from the projects section
-// Projects should only have: research, consulting, academic
-
 export const projects = [
   {
     id: 1,
@@ -604,7 +603,7 @@ export const projects = [
     demo: null,
   },
 ];
-// utils/constants.js - Update certificates array
+
 export const certificates = [
   {
     id: 1,
@@ -613,7 +612,7 @@ export const certificates = [
     date: 'February 2019',
     type: 'Doctorate',
     credentialId: 'KU-PHD-2019-001',
-    imageUrl: '/images/certificates/phd.png', // Updated path
+    imageUrl: '/images/certificates/phd.png',
     altText: 'PhD Certificate from Kenyatta University'
   },
   {
@@ -623,7 +622,7 @@ export const certificates = [
     date: '2009',
     type: 'Masters',
     credentialId: 'UON-MA-2009',
-    imageUrl: '/images/certificates/masters.png', // Updated path
+    imageUrl: '/images/certificates/masters.png',
     altText: 'MA Certificate from University of Nairobi'
   },
   {
@@ -633,7 +632,7 @@ export const certificates = [
     date: '2007',
     type: 'Bachelors',
     credentialId: 'CUEA-BA-2007',
-    imageUrl: '/images/certificates/bachelors.png', // Updated path
+    imageUrl: '/images/certificates/bachelors.png',
     altText: 'BA Certificate from Catholic University of Eastern Africa'
   },
   {
@@ -643,8 +642,6 @@ export const certificates = [
     date: '2010',
     type: 'Language',
     credentialId: 'AF-C1-2010',
-    // If you have a French certificate image, add it here:
-    // imageUrl: '/images/certificates/french.png',
     altText: 'French Language Certificate'
   },
   {
@@ -654,8 +651,6 @@ export const certificates = [
     date: '2011',
     type: 'Technical',
     credentialId: 'ITI-SPSS-2011',
-    // If you have an SPSS certificate image, add it here:
-    // imageUrl: '/images/certificates/spss.png',
     altText: 'SPSS Statistical Package Certificate'
   },
 ];

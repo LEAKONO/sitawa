@@ -1,4 +1,3 @@
-// components/Sections/Publications.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Download, Calendar, FileText, BookOpen, Search, Filter } from 'lucide-react';
@@ -39,7 +38,7 @@ const Publications = () => {
               onClick={() => setFilter(type.id)}
               className={`flex items-center space-x-1 sm:space-x-2 px-3 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-2.5 rounded-full transition-all text-sm sm:text-base ${
                 filter === type.id
-                  ? 'bg-gradient-to-r from-primary-600 to-purple-600 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-sky-600 to-navy-800 text-white shadow-lg'
                   : 'glass-morphism text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
               }`}
             >
@@ -52,7 +51,7 @@ const Publications = () => {
         {/* Publication Statistics - Responsive */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12">
           <div className="glass-morphism p-4 sm:p-6 rounded-2xl text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl font-bold text-sky-600 dark:text-sky-400 mb-1 sm:mb-2">
               {publications.length}
             </div>
             <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Total Publications</div>
@@ -64,13 +63,13 @@ const Publications = () => {
             <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Journal Articles</div>
           </div>
           <div className="glass-morphism p-4 sm:p-6 rounded-2xl text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-green-600 dark:text-green-400 mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-1 sm:mb-2">
               {publications.filter(p => p.type.toLowerCase().includes('book')).length}
             </div>
             <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Books & Chapters</div>
           </div>
           <div className="glass-morphism p-4 sm:p-6 rounded-2xl text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-orange-600 dark:text-orange-400 mb-1 sm:mb-2">
+            <div className="text-2xl sm:text-3xl font-bold text-amber-600 dark:text-amber-400 mb-1 sm:mb-2">
               {publications.filter(p => p.type.toLowerCase().includes('conference') || p.type.toLowerCase().includes('blog')).length}
             </div>
             <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Other Publications</div>
@@ -100,7 +99,7 @@ const Publications = () => {
                     {/* Publication Info */}
                     <div className="flex-1">
                       <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-primary-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-sky-500 to-navy-700 flex items-center justify-center flex-shrink-0">
                           {pub.type.toLowerCase().includes('book') ? (
                             <BookOpen className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                           ) : pub.type.toLowerCase().includes('journal') ? (
@@ -115,8 +114,8 @@ const Publications = () => {
                               pub.type.toLowerCase().includes('journal') 
                                 ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
                                 : pub.type.toLowerCase().includes('book')
-                                ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
-                                : 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300'
+                                ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
+                                : 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300'
                             }`}>
                               {pub.type}
                             </span>
@@ -126,11 +125,11 @@ const Publications = () => {
                             </span>
                           </div>
                           
-                          <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                          <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
                             {pub.title}
                           </h3>
                           
-                          <p className="text-primary-600 dark:text-primary-400 font-medium text-sm sm:text-base mb-2 sm:mb-3">
+                          <p className="text-sky-600 dark:text-sky-400 font-medium text-sm sm:text-base mb-2 sm:mb-3">
                             {pub.authors}
                           </p>
                           
@@ -147,7 +146,7 @@ const Publications = () => {
                         {pub.keywords.slice(0, 4).map((keyword, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 sm:px-3 sm:py-1 bg-gradient-to-r from-primary-100 to-primary-50 dark:from-primary-900/20 dark:to-primary-800/20 text-primary-700 dark:text-primary-300 rounded-full text-xs font-medium"
+                            className="px-2 py-1 sm:px-3 sm:py-1 bg-gradient-to-r from-sky-100 to-sky-50 dark:from-sky-900/20 dark:to-sky-800/20 text-sky-700 dark:text-sky-300 rounded-full text-xs font-medium"
                           >
                             {keyword}
                           </span>
@@ -169,7 +168,7 @@ const Publications = () => {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="px-3 py-2 sm:px-4 sm:py-2 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transition-all flex items-center justify-center gap-1 sm:gap-2 text-sm sm:text-base"
+                          className="px-3 py-2 sm:px-4 sm:py-2 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-lg font-medium hover:shadow-lg transition-all flex items-center justify-center gap-1 sm:gap-2 text-sm sm:text-base"
                         >
                           <ExternalLink size={14} className="sm:w-4 sm:h-4" />
                           <span className="hidden sm:inline">Read</span>
@@ -188,7 +187,7 @@ const Publications = () => {
                       
                       <button
                         onClick={() => setSelectedPub(pub)}
-                        className="text-primary-600 dark:text-primary-400 font-medium text-xs sm:text-sm hover:underline flex items-center gap-1 justify-center md:justify-start mt-1 sm:mt-0"
+                        className="text-sky-600 dark:text-sky-400 font-medium text-xs sm:text-sm hover:underline flex items-center gap-1 justify-center md:justify-start mt-1 sm:mt-0"
                       >
                         <Search size={12} className="sm:w-3.5 sm:h-3.5" />
                         View Abstract
@@ -234,15 +233,15 @@ const Publications = () => {
                         selectedPub.type.toLowerCase().includes('journal') 
                           ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
                           : selectedPub.type.toLowerCase().includes('book')
-                          ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
-                          : 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300'
+                          ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
+                          : 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300'
                       }`}>
                         {selectedPub.type}
                       </span>
                       <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mt-2 sm:mt-3">
                         {selectedPub.title}
                       </h3>
-                      <p className="text-primary-600 dark:text-primary-400 text-sm sm:text-base mt-1 sm:mt-2">
+                      <p className="text-sky-600 dark:text-sky-400 text-sm sm:text-base mt-1 sm:mt-2">
                         {selectedPub.authors}
                       </p>
                       {selectedPub.journal && (
@@ -278,7 +277,7 @@ const Publications = () => {
                           {selectedPub.keywords.map((keyword, idx) => (
                             <span
                               key={idx}
-                              className="px-2 py-1 sm:px-3 sm:py-1.5 bg-gradient-to-r from-primary-100 to-primary-50 dark:from-primary-900/20 dark:to-primary-800/20 text-primary-700 dark:text-primary-300 rounded-lg text-xs sm:text-sm"
+                              className="px-2 py-1 sm:px-3 sm:py-1.5 bg-gradient-to-r from-sky-100 to-sky-50 dark:from-sky-900/20 dark:to-sky-800/20 text-sky-700 dark:text-sky-300 rounded-lg text-xs sm:text-sm"
                             >
                               {keyword}
                             </span>
@@ -299,7 +298,7 @@ const Publications = () => {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="px-3 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-2.5 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transition-all flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
+                          className="px-3 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-2.5 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-lg font-medium hover:shadow-lg transition-all flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
                         >
                           <ExternalLink size={14} className="sm:w-4 sm:h-4" />
                           Full Article
@@ -340,7 +339,7 @@ const Publications = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-3 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
+              className="inline-flex items-center px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-3 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-full font-semibold hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
             >
               Discuss Research Collaboration
               <ExternalLink className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />

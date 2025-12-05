@@ -25,7 +25,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -69,7 +68,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="flex items-start space-x-3 sm:space-x-4"
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-primary-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-sky-500 to-navy-700 flex items-center justify-center flex-shrink-0">
                     {info.type === 'email' && <Mail className="text-white w-5 h-5 sm:w-6 sm:h-6" />}
                     {info.type === 'phone' && <Phone className="text-white w-5 h-5 sm:w-6 sm:h-6" />}
                     {info.type === 'location' && <MapPin className="text-white w-5 h-5 sm:w-6 sm:h-6" />}
@@ -80,7 +79,7 @@ const Contact = () => {
                     </h4>
                     <a
                       href={info.href}
-                      className="text-gray-600 dark:text-gray-400 text-sm sm:text-base hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                      className="text-gray-600 dark:text-gray-400 text-sm sm:text-base hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
                     >
                       {info.value}
                     </a>
@@ -105,7 +104,7 @@ const Contact = () => {
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.1, y: -5 }}
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl glass-morphism flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:shadow-lg transition-all"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl glass-morphism flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 hover:shadow-lg transition-all"
                   >
                     <social.icon size={18} />
                   </motion.a>
@@ -149,7 +148,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-900 outline-none transition-all text-sm sm:text-base"
+                        className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 dark:focus:ring-sky-900 outline-none transition-all text-sm sm:text-base"
                         placeholder="John Doe"
                       />
                     </div>
@@ -163,7 +162,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-900 outline-none transition-all text-sm sm:text-base"
+                        className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 dark:focus:ring-sky-900 outline-none transition-all text-sm sm:text-base"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -179,7 +178,7 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-900 outline-none transition-all text-sm sm:text-base"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 dark:focus:ring-sky-900 outline-none transition-all text-sm sm:text-base"
                       placeholder="Project Inquiry"
                     />
                   </div>
@@ -194,7 +193,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={4}
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-900 outline-none transition-all text-sm sm:text-base resize-none"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 dark:focus:ring-sky-900 outline-none transition-all text-sm sm:text-base resize-none"
                       placeholder="Your message here..."
                     />
                   </div>
@@ -204,7 +203,7 @@ const Contact = () => {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-sm sm:text-base"
+                    className="w-full py-3 sm:py-4 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-sm sm:text-base"
                   >
                     {isSubmitting ? (
                       <>

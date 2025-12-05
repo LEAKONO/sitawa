@@ -1,4 +1,3 @@
-// components/Layout/Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
@@ -28,7 +27,6 @@ const Navbar = () => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          // Adjust the threshold (80px = navbar height + some padding)
           if (rect.top <= 100 && rect.bottom >= 100) {
             setActiveSection(section);
             break;
@@ -38,21 +36,18 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScrollSection);
-    // Initial check
     handleScrollSection();
     
     return () => window.removeEventListener('scroll', handleScrollSection);
   }, []);
 
-  // Handle click on mobile links
   const handleLinkClick = (section) => {
     setIsOpen(false);
     setActiveSection(section);
     
-    // Smooth scroll to section
     const element = document.getElementById(section);
     if (element) {
-      const offset = 80; // Navbar height
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
       
@@ -105,14 +100,14 @@ const Navbar = () => {
                 >
                   <span className={`font-medium transition-colors ${
                     isActive
-                      ? 'text-primary-600 dark:text-primary-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                      ? 'text-sky-600 dark:text-sky-400'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400'
                   }`}>
                     {link.name}
                   </span>
                   
                   {/* Active indicator */}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-600 to-purple-600 transition-all duration-300 ${
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-sky-600 to-navy-800 transition-all duration-300 ${
                     isActive ? 'w-full' : 'w-0 group-hover:w-full'
                   }`} />
                   
@@ -120,7 +115,7 @@ const Navbar = () => {
                   {isActive && (
                     <motion.span
                       layoutId="navbar-active"
-                      className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary-600/10 to-purple-600/10"
+                      className="absolute inset-0 rounded-lg bg-gradient-to-r from-sky-600/10 to-navy-800/10"
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
                   )}
@@ -136,7 +131,7 @@ const Navbar = () => {
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2.5 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 shadow-md hover:shadow-xl"
+              className="px-6 py-2.5 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 shadow-md hover:shadow-xl"
             >
               Contact Me
             </motion.button>
@@ -147,7 +142,7 @@ const Navbar = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="p-2 text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -174,7 +169,7 @@ const Navbar = () => {
                     onClick={() => handleLinkClick(section)}
                     className={`py-3 px-4 rounded-xl text-left font-medium transition-all ${
                       isActive
-                        ? 'bg-gradient-to-r from-primary-600 to-purple-600 text-white shadow-md'
+                        ? 'bg-gradient-to-r from-sky-600 to-navy-800 text-white shadow-md'
                         : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                     }`}
                   >
@@ -185,7 +180,7 @@ const Navbar = () => {
               
               <button
                 onClick={() => handleLinkClick('contact')}
-                className="py-3 px-4 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-xl font-semibold text-center shadow-md hover:shadow-lg transition-all mt-2"
+                className="py-3 px-4 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-xl font-semibold text-center shadow-md hover:shadow-lg transition-all mt-2"
               >
                 Contact Me
               </button>
