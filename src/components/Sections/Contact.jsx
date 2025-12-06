@@ -61,7 +61,7 @@ const Contact = () => {
             <div className="space-y-4 sm:space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
-                  key={info.type}
+                  key={info.type === 'email' ? `${info.type}-${index}` : info.type}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -79,7 +79,7 @@ const Contact = () => {
                     </h4>
                     <a
                       href={info.href}
-                      className="text-gray-600 dark:text-gray-400 text-sm sm:text-base hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
+                      className="text-gray-600 dark:text-gray-400 text-sm sm:text-base hover:text-sky-600 dark:hover:text-sky-400 transition-colors block"
                     >
                       {info.value}
                     </a>

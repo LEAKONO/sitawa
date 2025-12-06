@@ -1479,6 +1479,12 @@ export const contactInfo = [
     href: 'mailto:michael.sitawa@gmail.com',
   },
   {
+    type: 'email',
+    label: 'Institute Email',
+    value: 'mmugah@issafrica.org',
+    href: 'mailto:mmugah@issafrica.org',
+  },
+  {
     type: 'phone',
     label: 'Phone',
     value: '+254 720 776 277',
