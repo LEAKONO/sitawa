@@ -21,25 +21,25 @@ const Experience = () => {
 
   const displayedExperiences = showAll
     ? filteredExperiences
-    : filteredExperiences.slice(0, 6);
+    : filteredExperiences.slice(0, 8); // Increased from 6 to 8 for better display
 
   const categoryColors = {
     research: "from-sky-500 to-blue-600",
     academic: "from-emerald-500 to-teal-600",
     consulting: "from-amber-500 to-orange-600",
     administration: "from-indigo-500 to-purple-600",
-    volunteer: "from-teal-500 to-cyan-500",
-    teaching: "from-blue-500 to-indigo-600",
+    training: "from-teal-500 to-cyan-500",
+    volunteer: "from-rose-500 to-pink-500",
   };
 
   const getCategoryColor = (type) => {
     const typeLower = type.toLowerCase();
     if (typeLower.includes("research")) return categoryColors.research;
-    if (typeLower.includes("academic")) return categoryColors.academic;
+    if (typeLower.includes("academic") || typeLower.includes("teaching")) return categoryColors.academic;
     if (typeLower.includes("consulting")) return categoryColors.consulting;
     if (typeLower.includes("administration") || typeLower.includes("admin")) return categoryColors.administration;
-    if (typeLower.includes("volunteer")) return categoryColors.volunteer;
-    if (typeLower.includes("teaching")) return categoryColors.teaching;
+    if (typeLower.includes("training")) return categoryColors.training;
+    if (typeLower.includes("volunteer") || typeLower.includes("intern")) return categoryColors.volunteer;
     return "from-sky-500 to-navy-700";
   };
 
@@ -48,7 +48,7 @@ const Experience = () => {
       <div className="container-custom px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="Professional Experience"
-          subtitle="Comprehensive career spanning research, academia, consulting, and administration"
+          subtitle={`Comprehensive career spanning ${experiences.length} roles in research, academia, consulting, training, and administration`}
         />
 
         {/* Filter Categories */}
@@ -106,7 +106,7 @@ const Experience = () => {
               key={exp.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
               viewport={{ once: true }}
               className="relative"
             >
@@ -240,7 +240,7 @@ const Experience = () => {
         </div>
 
         {/* Show More/Less Button */}
-        {filteredExperiences.length > 6 && (
+        {filteredExperiences.length > 8 && (
           <div className="text-center mt-8 sm:mt-12">
             <button
               onClick={() => setShowAll(!showAll)}

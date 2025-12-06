@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Download, ArrowRight, Mail, Linkedin } from 'lucide-react';
 
 const Hero = () => {
-  const cvDriveLink = "https://drive.google.com/file/d/1sy1DZmZt5gigLhv4n6LilpC7kjN1ZNws/view?usp=sharing";
+  const cvDriveLink = "https://drive.google.com/file/d/1c8oAVu6zOvQaNbZwW8dnnr-ccRnH7q5U/view?usp=sharing";
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-0">
@@ -31,7 +31,7 @@ const Hero = () => {
                 <div className="aspect-square bg-gradient-to-br from-sky-100 to-navy-100 dark:from-gray-800 dark:to-gray-900 rounded-xl overflow-hidden">
                   <div className="w-full h-full flex items-center justify-center">
                     <img
-                      src="/images/certificates/hero2.jpeg"
+                      src="/images/certificates/hero4.jpeg"
                       alt="Dr. Michael Sitawa Mugah"
                       className="w-full h-full object-cover"
                     />
