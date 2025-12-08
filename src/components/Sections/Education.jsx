@@ -270,85 +270,104 @@ const Education = () => {
   };
 
   const educationWithCertificates = [
-  {
-    id: 1,
-    degree: 'Doctor of Philosophy (Ph.D) in Sociology',
-    institution: 'Kenyatta University',
-    period: 'August 2011 - February 2019',
-    location: 'Nairobi, Kenya',
-    description: 'Thesis: Households and Group Networks in the Development of Fish Farming in Busia County',
-    achievements: [
-      'Successfully defended PhD dissertation',
-      'Published multiple peer-reviewed journal articles from research',
-      'Presented research findings at international conferences',
-      'Contributed to knowledge in rural development and aquaculture',
-      'Received research grants for fieldwork'
-    ],
-    grade: 'Pass with Distinction',
-    certificate: certificates.find(c => c.type === 'Doctorate') || certificates[0],
-    iconColor: 'from-sky-500 to-navy-700',
-    badgeColor: 'bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300'
-  },
-  {
-    id: 2,
-    degree: 'Master of Arts in Sociology',
-    institution: 'University of Nairobi',
-    period: '2008 - 2009',
-    location: 'Nairobi, Kenya',
-    description: 'Specialization: Community Development and Rural Sociology',
-    achievements: [
-      'Distinction in Research Methodology',
-      'Published Master\'s research findings',
-      'Awarded scholarship for academic excellence',
-      'Class Representative for MA cohort',
-      'Active participant in departmental seminars'
-    ],
-    grade: 'Pass with Distinction',
-    certificate: certificates.find(c => c.type === 'Masters') || certificates[1],
-    iconColor: 'from-sky-600 to-blue-600',
-    badgeColor: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
-  },
-  {
-    id: 3,
-    degree: 'Bachelor of Arts in Social Sciences',
-    institution: 'Catholic University of Eastern Africa',
-    period: '2003 - 2007',
-    location: 'Nairobi, Kenya',
-    description: 'Majors: Sociology and Political Science',
-    achievements: [
-      'Second Class Upper Division (Honors)',
-      'Elected Class Representative 2003-2007',
-      'Deputy Secretary General - Kenya Model United Nations CUEA Chapter',
-      'Head Delegate at National Model UN Conferences (Cameroon & Morocco delegations)',
-      'Deputy Projects Director - Righteous Invasion of Towns project',
-      'Active member: Political Science Association & HIV/AIDS awareness club',
-      'Mediator in academic seminars and debates'
-    ],
-    grade: 'Second Class Upper Division',
-    certificate: certificates.find(c => c.type === 'Bachelors') || certificates[2],
-    iconColor: 'from-emerald-500 to-teal-600',
-    badgeColor: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
-  },
-  {
-    id: 4,
-    degree: 'Certificate in Rights and Protection of Children in Armed Conflict',
-    institution: 'École de Maintien de la Paix « Alioune Blondin BESYE »',
-    period: 'May 2023',
-    location: 'Bamako, Mali',
-    description: 'Specialized training on international child protection laws and protocols in conflict zones',
-    achievements: [
-      'Completed intensive two-week training program',
-      'Gained expertise in international humanitarian law',
-      'Developed practical skills for child protection in armed conflicts',
-      'Enhanced understanding of AU and UN child protection frameworks',
-      'Networking with international peacekeeping professionals'
-    ],
-    grade: 'Certificate of Completion',
-    certificate: certificates.find(c => c.id === 4) || certificates[3],
-    iconColor: 'from-purple-500 to-pink-500',
-    badgeColor: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
-  }
-];
+    {
+      id: 1,
+      degree: 'Doctor of Philosophy (Ph.D) in Sociology',
+      institution: 'Kenyatta University',
+      period: 'August 2011 - February 2019',
+      location: 'Nairobi, Kenya',
+      description: 'Thesis: Households and Group Networks in the Development of Fish Farming in Busia County',
+      achievements: [
+        'Successfully defended PhD dissertation',
+        'Published multiple peer-reviewed journal articles from research',
+        'Presented research findings at international conferences',
+        'Contributed to knowledge in rural development and aquaculture',
+        'Received research grants for fieldwork'
+      ],
+      grade: 'Pass with Distinction',
+      certificate: certificates.find(c => c.type === 'Doctorate') || certificates[0],
+      iconColor: 'from-sky-500 to-navy-700',
+      badgeColor: 'bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300'
+    },
+    {
+      id: 2,
+      degree: 'Master of Arts in Sociology',
+      institution: 'University of Nairobi',
+      period: '2008 - 2009',
+      location: 'Nairobi, Kenya',
+      description: 'Specialization: Community Development and Rural Sociology',
+      achievements: [
+        'Distinction in Research Methodology',
+        'Published Master\'s research findings',
+        'Awarded scholarship for academic excellence',
+        'Class Representative for MA cohort',
+        'Active participant in departmental seminars'
+      ],
+      grade: 'Pass with Distinction',
+      certificate: certificates.find(c => c.type === 'Masters') || certificates[1],
+      iconColor: 'from-sky-600 to-blue-600',
+      badgeColor: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
+    },
+    {
+      id: 3,
+      degree: 'Bachelor of Arts in Social Sciences',
+      institution: 'Catholic University of Eastern Africa',
+      period: '2003 - 2007',
+      location: 'Nairobi, Kenya',
+      description: 'Majors: Sociology and Political Science',
+      achievements: [
+        'Second Class Upper Division (Honors)',
+        'Elected Class Representative 2003-2007',
+        'Deputy Secretary General - Kenya Model United Nations CUEA Chapter',
+        'Head Delegate at National Model UN Conferences (Cameroon & Morocco delegations)',
+        'Deputy Projects Director - Righteous Invasion of Towns project',
+        'Active member: Political Science Association & HIV/AIDS awareness club',
+        'Mediator in academic seminars and debates'
+      ],
+      grade: 'Second Class Upper Division',
+      certificate: certificates.find(c => c.type === 'Bachelors') || certificates[2],
+      iconColor: 'from-emerald-500 to-teal-600',
+      badgeColor: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
+    },
+    {
+      id: 4,
+      degree: 'Certificate in Rights and Protection of Children in Armed Conflict',
+      institution: 'École de Maintien de la Paix « Alioune Blondin BESYE »',
+      period: 'May 2023',
+      location: 'Bamako, Mali',
+      description: 'Specialized training on international child protection laws and protocols in conflict zones',
+      achievements: [
+        'Completed intensive two-week training program',
+        'Gained expertise in international humanitarian law',
+        'Developed practical skills for child protection in armed conflicts',
+        'Enhanced understanding of AU and UN child protection frameworks',
+        'Networking with international peacekeeping professionals'
+      ],
+      grade: 'Certificate of Completion',
+      certificate: certificates.find(c => c.id === 4) || certificates[3],
+      iconColor: 'from-purple-500 to-pink-500',
+      badgeColor: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
+    },
+    {
+      id: 5,
+      degree: 'Certificate of Participation - Red Cross/Red Crescent General Assembly',
+      institution: 'International Federation of Red Cross and Red Crescent Societies',
+      period: '18-25 November 2009',
+      location: 'Nairobi, Kenya',
+      description: 'In recognition of support and contribution during the General Assembly of the International Federation of Red Cross and Red Crescent Societies and 2009 Council of Delegates',
+      achievements: [
+        'Participated in international humanitarian conference',
+        'Contributed to discussions on humanitarian principles',
+        'Networked with international humanitarian professionals',
+        'Enhanced understanding of Red Cross/Red Crescent operations',
+        'Gained insights into humanitarian response coordination'
+      ],
+      grade: 'Certificate of Participation',
+      certificate: certificates.find(c => c.id === 7) || certificates[6],
+      iconColor: 'from-red-500 to-red-700',
+      badgeColor: 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300'
+    }
+  ];
 
   const shortCourses = [
     {
@@ -357,7 +376,7 @@ const Education = () => {
       institution: 'Alliance Française de Nairobi',
       year: '2010',
       level: 'Fluent Proficiency',
-      certificate: certificates.find(c => c.id === 5) || certificates[4], // French Language (ID: 5)
+      certificate: certificates.find(c => c.id === 5) || certificates[4],
       iconColor: 'from-orange-500 to-yellow-500'
     },
     {
@@ -366,7 +385,7 @@ const Education = () => {
       institution: 'Intraglobal Training Institute',
       year: '2011',
       level: 'Advanced',
-      certificate: certificates.find(c => c.id === 6) || certificates[5], // SPSS (ID: 6)
+      certificate: certificates.find(c => c.id === 6) || certificates[5],
       iconColor: 'from-red-500 to-pink-500'
     },
     {
@@ -386,31 +405,31 @@ const Education = () => {
       iconColor: 'from-teal-500 to-cyan-500'
     },
     {
-    id: 5,
-    title: 'Pedagogical Preparation of University Lecturers',
-    institution: 'Catholic University of Eastern Africa (with Liverpool Hope University-UK)',
-    year: '2010',
-    level: 'Professional Development',
-    grade: 'Certificate of Completion',
-    achievements: [
-      'Education for Sustainable Development Workshop',
-      'Enhanced teaching methodologies for higher education'
-    ],
-    iconColor: 'from-green-500 to-emerald-600'
-  },
-  {
-    id: 6,
-    title: 'Academic Staff Training Workshop',
-    institution: 'Catholic University of Eastern Africa',
-    year: '2015',
-    level: 'Teaching and Learning in Higher Education',
-    grade: 'Certificate of Participation',
-    achievements: [
-      'Advanced pedagogical techniques',
-      'Curriculum development strategies'
-    ],
-    iconColor: 'from-violet-500 to-purple-600'
-  }
+      id: 5,
+      title: 'Pedagogical Preparation of University Lecturers',
+      institution: 'Catholic University of Eastern Africa (with Liverpool Hope University-UK)',
+      year: '2010',
+      level: 'Professional Development',
+      grade: 'Certificate of Completion',
+      achievements: [
+        'Education for Sustainable Development Workshop',
+        'Enhanced teaching methodologies for higher education'
+      ],
+      iconColor: 'from-green-500 to-emerald-600'
+    },
+    {
+      id: 6,
+      title: 'Academic Staff Training Workshop',
+      institution: 'Catholic University of Eastern Africa',
+      year: '2015',
+      level: 'Teaching and Learning in Higher Education',
+      grade: 'Certificate of Participation',
+      achievements: [
+        'Advanced pedagogical techniques',
+        'Curriculum development strategies'
+      ],
+      iconColor: 'from-violet-500 to-purple-600'
+    }
   ];
 
   return (
@@ -420,8 +439,6 @@ const Education = () => {
           title="Education & Certifications"
           subtitle="Academic credentials and professional qualifications"
         />
-
-      
 
         {/* Formal Education with Certificates */}
         <div className="mb-12 sm:mb-16">
@@ -564,7 +581,8 @@ const Education = () => {
                               {index === 0 ? 'Doctorate' : 
                                index === 1 ? 'Masters' : 
                                index === 2 ? 'Bachelors' : 
-                               'Professional Certification'}
+                               index === 3 ? 'Professional Training' :
+                               'International Conference'}
                             </span>
                           </div>
                         </div>
@@ -774,11 +792,11 @@ const Education = () => {
         >
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6">
             <div className="glass-morphism rounded-2xl p-4 sm:p-6 text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">4</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">5</div>
               <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Degree & Cert Programs</div>
             </div>
             <div className="glass-morphism rounded-2xl p-4 sm:p-6 text-center">
-              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">6</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">7</div>
               <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">Certifications</div>
             </div>
             <div className="glass-morphism rounded-2xl p-4 sm:p-6 text-center">

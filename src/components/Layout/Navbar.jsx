@@ -9,7 +9,6 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  // Handle scroll effect for navbar background
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -18,7 +17,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle active section detection
   useEffect(() => {
     const handleScrollSection = () => {
       const sections = navLinks.map(link => link.href.substring(1));
@@ -69,9 +67,10 @@ const Navbar = () => {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="container-custom px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
+      {/* REMOVE container-custom and use direct max-w */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between w-full">
+          {/* Logo - Far left */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -83,59 +82,48 @@ const Navbar = () => {
             </span>
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link, index) => {
-              const section = link.href.substring(1);
-              const isActive = activeSection === section;
-              
-              return (
-                <motion.button
-                  key={link.name}
-                  onClick={() => handleLinkClick(section)}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="relative group"
-                >
-                  <span className={`font-medium transition-colors ${
-                    isActive
-                      ? 'text-sky-600 dark:text-sky-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400'
-                  }`}>
-                    {link.name}
-                  </span>
-                  
-                  {/* Active indicator */}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-sky-600 to-navy-800 transition-all duration-300 ${
-                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`} />
-                  
-                  {/* Active glow effect */}
-                  {isActive && (
-                    <motion.span
-                      layoutId="navbar-active"
-                      className="absolute inset-0 rounded-lg bg-gradient-to-r from-sky-600/10 to-navy-800/10"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
-                  )}
-                </motion.button>
-              );
-            })}
-            
-            <ThemeToggle />
-            
-            <motion.button
-              onClick={() => handleLinkClick('contact')}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-2.5 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 shadow-md hover:shadow-xl"
-            >
-              Contact Me
-            </motion.button>
-          </div>
+       <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+  {navLinks.map((link, index) => {
+    const section = link.href.substring(1);
+    const isActive = activeSection === section;
+    
+    return (
+      <motion.button
+        key={link.name}
+        onClick={() => handleLinkClick(section)}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.1 }}
+        className="relative group"
+      >
+        <span className={`text-xs xl:text-sm font-medium transition-colors ${
+          isActive
+            ? 'text-sky-600 dark:text-sky-400'
+            : 'text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400'
+        }`}>
+          {link.name}
+        </span>
+        
+        <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-sky-600 to-navy-800 transition-all duration-300 ${
+          isActive ? 'w-full' : 'w-0 group-hover:w-full'
+        }`} />
+      </motion.button>
+    );
+  })}
+  
+  <ThemeToggle />
+  
+  <motion.button
+    onClick={() => handleLinkClick('contact')}
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="px-4 py-2 bg-gradient-to-r from-sky-600 to-navy-800 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 shadow-md hover:shadow-xl text-sm"
+  >
+    Contact Me
+  </motion.button>
+</div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">

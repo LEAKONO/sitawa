@@ -1,15 +1,16 @@
+// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Layout/Navbar';
 import Hero from './components/Sections/Hero';
 import About from './components/Sections/About';
 import Experience from './components/Sections/Experience';
+import Education from './components/Sections/Education';
 import Projects from './components/Sections/Projects';
-import Publications from './components/Sections/Publications'; // Add this
-// import Certificates from './components/Sections/Certificates';
+import Publications from './components/Sections/Publications';
+import Gallery from './components/Sections/Gallery';
 import Contact from './components/Sections/Contact';
 import Footer from './components/Layout/Footer';
-import Education from './components/Sections/Education';
 
 function App() {
   return (
@@ -19,11 +20,11 @@ function App() {
         <main>
           <Hero />
           <About />
-          <Education /> {/* Add this */}
+          <Education />
           <Experience />
           <Projects />
           <Publications />
-          {/* <Certificates /> */}
+          <Gallery /> 
           <Contact />
         </main>
         <Footer />
