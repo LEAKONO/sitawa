@@ -717,39 +717,39 @@ export const experiences = [
     skills: ['Transnational Crime Research', 'Stakeholder Interviews', 'Focus Groups', 'Policy Recommendations'],
   },
    {
-    id: 33,
-    position: 'Research Consultant - East Africa Community Regional Force',
-    company: 'Kenya Defence Forces Headquarters / EACRF',
-    period: 'Jan 2025 - Apr 2025',
-    location: 'Eastern Democratic Republic of Congo',
-    type: 'Research & Deployment',
-    category: 'research',
-    description: 'Deployed as civilian research specialist on soft power doctrine and human security to support East Africa Community Regional Force mission.',
-    responsibilities: [
-      'Carried out research study on "Disaster Risk Reduction in Conflict Zones: Focus on Food Security in Eastern DRC"',
-      'Presented periodic reports on research findings to mission leadership',
-      'Provided regular briefs on community perceptions of EACRF mission progress',
-      'Suggested recommendations to improve mission effectiveness and community engagement',
-      'Applied soft power approaches in conflict stabilization efforts',
-      'Conducted field assessments in humanitarian security contexts'
-    ],
-    achievements: [
-      'Developed comprehensive research methodology for conflict zone assessment',
-      'Enhanced mission understanding of local community dynamics',
-      'Contributed to improved civil-military coordination strategies',
-      'Provided evidence-based recommendations for mission adaptation'
-    ],
-    skills: [
-      'Soft Power Doctrine',
-      'Human Security',
-      'Conflict Zone Research',
-      'Civil-Military Coordination',
-      'Humanitarian Security',
-      'Field Assessment',
-      'Community Perception Analysis',
-      'Mission Effectiveness Evaluation'
-    ],
-  },
+  id: 33,
+  position: 'Research Consultant - East Africa Community Regional Force',
+  company: 'Kenya Defence Forces Headquarters / EACRF',
+  period: '5th January - 30th April 2025',
+  location: 'Eastern Democratic Republic of Congo',
+  type: 'Research & Deployment',
+  category: 'research',
+  description: 'Deployed as civilian research specialist on soft power doctrine and human security to support East Africa Community Regional Force mission.',
+  responsibilities: [
+    'Carried out research study titled "Disaster Risk Reduction in Conflict Zones: Focus on Food Security in Eastern DRC"',
+    'Presented periodic reports on research findings to mission leadership',
+    'Provided regular briefs on community perceptions of EACRF mission progress',
+    'Suggested recommendations to improve mission effectiveness and community engagement',
+    'Applied soft power approaches in conflict stabilization efforts',
+    'Conducted field assessments in humanitarian security contexts'
+  ],
+  achievements: [
+    'Developed comprehensive research methodology for conflict zone assessment',
+    'Enhanced mission understanding of local community dynamics',
+    'Contributed to improved civil-military coordination strategies',
+    'Provided evidence-based recommendations for mission adaptation'
+  ],
+  skills: [
+    'Soft Power Doctrine',
+    'Human Security',
+    'Conflict Zone Research',
+    'Civil-Military Coordination',
+    'Humanitarian Security',
+    'Field Assessment',
+    'Community Perception Analysis',
+    'Mission Effectiveness Evaluation'
+  ],
+}
 
 ];
 
@@ -1515,6 +1515,17 @@ export const publications = [
     abstract: 'Examination of social capital role in agro-based development initiatives.',
     link: '#',
   },
+  {
+  id: 52, 
+  title: 'Organised crime in Africa / Illicit trade on inland waterways: the case of Lake Tanganyika',
+  authors: 'Michael Sitawa Mugah',
+  year: '2025',
+  journal: 'Institute for Security Studies',
+  type: 'Research Paper',
+  keywords: ['Organised Crime', 'Illicit Trade', 'Lake Tanganyika', 'Inland Waterways', 'Smuggling', 'Trafficking', 'Illegal Fishing', 'Weak Governance', 'Regional Instability', 'Central Africa'],
+  abstract: 'This paper examines illicit trade on Lake Tanganyika, where weak governance and regional instability enable smuggling, trafficking and illegal fishing.',
+  link: 'https://enactafrica.org/research/research-papers/illicit-trade-on-inland-waterways-the-case-of-lake-tanganyika',
+}
 ];
 
 export const contactInfo = [
