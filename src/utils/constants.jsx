@@ -941,7 +941,19 @@ export const certificates = [
 ];
 
 export const publications = [
+
   // Blog Articles
+  {
+    id: 52,
+    title: 'Organised crime in Africa / Illicit trade on inland waterways: the case of Lake Tanganyika',
+    authors: 'Carina Bruwer, Mugah Michael Sitawa, Valtino Omolo, Willis Okumu',
+    year: '2025',
+    journal: 'Institute for Security Studies',
+    type: 'Research Paper',
+    keywords: ['Organised Crime', 'Illicit Trade', 'Lake Tanganyika', 'Inland Waterways', 'Smuggling', 'Trafficking', 'Illegal Fishing', 'Weak Governance', 'Regional Instability', 'Central Africa', 'Waterway Security'],
+    abstract: 'This paper examines illicit trade on Lake Tanganyika, where weak governance and regional instability enable smuggling, trafficking and illegal fishing.',
+    link: 'https://enactafrica.org/research/research-papers/illicit-trade-on-inland-waterways-the-case-of-lake-tanganyika',
+  },
   {
     id: 1,
     title: 'The Jubaland Forces incursion: Safeguarding Kenya\'s territorial integrity amid regional volatility',
@@ -1515,17 +1527,6 @@ export const publications = [
     abstract: 'Examination of social capital role in agro-based development initiatives.',
     link: '#',
   },
-  {
-  id: 52, 
-  title: 'Organised crime in Africa / Illicit trade on inland waterways: the case of Lake Tanganyika',
-  authors: 'Michael Sitawa Mugah',
-  year: '2025',
-  journal: 'Institute for Security Studies',
-  type: 'Research Paper',
-  keywords: ['Organised Crime', 'Illicit Trade', 'Lake Tanganyika', 'Inland Waterways', 'Smuggling', 'Trafficking', 'Illegal Fishing', 'Weak Governance', 'Regional Instability', 'Central Africa'],
-  abstract: 'This paper examines illicit trade on Lake Tanganyika, where weak governance and regional instability enable smuggling, trafficking and illegal fishing.',
-  link: 'https://enactafrica.org/research/research-papers/illicit-trade-on-inland-waterways-the-case-of-lake-tanganyika',
-}
 ];
 
 export const contactInfo = [
